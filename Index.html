@@ -9,60 +9,98 @@
 <link rel="stylesheet" href="styles/index.css" >
 </head>
 <body>
-    <div class="content">
-<header class="header-container">
+  <!-- header -->
+<header >
   <h1 class="logo">Bagora</h1>
 
   <input type="checkbox" id="menu-toggle">
 
   <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-  <nav class="nav-links">
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+  <nav >
+    <ul class="nav-menu">
+      <li ><a class="nav-link" href="#hero-section">Home</a></li>
+      <li ><a class="nav-link" href="#about-us">About</a></li>
+      <li><a class="nav-link" href="#contact-us">Contact</a></li>
+      <li><a class="nav-link" href="./pages/log-in.html">Log In</a></li>
+      <li><a class="nav-link" href="#about-us">Why Us</a></li>
+
     </ul>
   </nav>
 </header>
 
 
 <main>
-<section class="hero-section">
-<div class="container">
+  <!-- hero section -->
+<section class="hero-section" id="hero-section">
     <div class="overlay">
     <h2>Trendy Bags for Every Style, Shop Now!</h2>
     <a href="./pages/log-in.html" class="btn">Get Started</a>
-</div></div>
+</div>
 </section>
 
+<!-- products section -->
 <section class="products">
 <h2>Featured Products</h2>
     <div class="product-list">
    
         <figure class="item">
-            <img src="Images/bag2.jpg" alt="Bag 1">
-            <h3>Crossbody Bags</h3> 
+            <img src="Images/bag2.jpg" alt="Crossbody Bags">
+            <figcaption>Crossbody Bags</figcaption> 
         </figure>
         <figure class="item">
             <img src="Images/bag1.jpg" alt="Shoulder Bags" class="shoulder-bag">
-            <h3>Shoulder Bags</h3> </figure>
+            <figcaption>Shoulder Bags</figcaption> </figure>
         <figure class="item">
             <img src="Images/bag4.jpg" alt="Top Handles" class="top-handle">
-            <h3>Top Handles</h3> </figure>
+            <figcaption>Top Handles</figcaption> </figure>
         <figure class="item">
             <img src="Images/bag3.jpg" alt="Backpacks Bags" class="backpack">
-            <h3>Backpacks Bags</h3> </figure>
+            <figcaption>Backpacks Bags</figcaption> </figure>
+            
         
         </div>
 </section>
-<section id="about-us" class="about-section">
-    <h2>About Bagora</h2>
-    <p>Welcome to Bagora, your ultimate destination for stylish and functional bags. We are passionate about providing high-quality bags that cater to your everyday needs while keeping you fashionable. Whether you're looking for a chic handbag, a versatile backpack, or a trendy tote, Bagora has got you covered. Our collection features a wide range of designs, colors, and sizes to suit every occasion and personal style. At Bagora, we believe that a great bag is more than just an accessory; it's a statement of individuality and confidence. Explore our selection and find the perfect bag that complements your lifestyle.</p>
+
+<!-- info section -->
+<section class="info-section">
+  <h2>Why Choose Bagora?</h2>
+  <div class="info-cards">
+    <figure class="card">
+      <img src="images/bag-shopping-svgrepo-com.png" alt="Unique Design">
+      <figcaption>Unique Design</figcaption>
+      <p>Trendy and modern bags designed to match every style.</p>
+    </figure>
+
+    <figure class="card">
+      <img src="images/badge-svgrepo-com.png" alt="Premium Quality">
+      <figcaption>Premium Quality</figcaption>
+      <p>Made with durable materials to ensure long-lasting use.</p>
+    </figure>
+
+    <figcaption class="card">
+      <img src="images/fast-launch-svgrepo-com.png" alt="Fast Shipping">
+      <figcaption>Fast Shipping</figcaption>
+      <p>Get your order quickly with reliable delivery services.</p>
+    </figcaption>
+
+    <figure class="card">
+      <img src="images/customer-support-svgrepo-com.png" alt="Customer Support">
+      <figcaption>Customer Support</figcaption>
+      <p>Our team is always here to help with any inquiries.</p>
+    </figure>
+  </div>
 </section>
 
-
+<!-- about us -->
+<section id="about-us" class="about-section">
+  <img src="Images/about-us-svgrepo-com.png" alt="About Us" class="about-image">
+  <h2>About Bagora</h2>
+    <p>Welcome to Bagora, your ultimate destination for stylish and functional bags. We are passionate about providing high-quality bags that cater to your everyday needs while keeping you fashionable. Whether you're looking for a chic handbag, a versatile backpack, or a trendy tote, Bagora has got you covered. Our collection features a wide range of designs, colors, and sizes to suit every occasion and personal style. At Bagora, we believe that a great bag is more than just an accessory; it's a statement of individuality and confidence. Explore our selection and find the perfect bag that complements your lifestyle.</p>
+</section>
 </main>
+
+<!-- footer -->
 <footer>
   <div id="contact-us" class="contact-section">
     <h3>Contact Us</h3>
@@ -78,6 +116,6 @@
   </div>
 </footer>
 
-    </div>
+    
 </body>
 </html>

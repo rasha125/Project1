@@ -1,99 +1,113 @@
 
-body {
-
-  margin: 0;       
-  padding: 0;       
-  background: #ECEEDF;
-}
-.content {
-      flex-wrap: wrap;
-  display: grid;
-  grid-template-areas:
-    "header "
-    "content"
-    "footer ";
-  background-color: #ECEEDF;
-}
-
-.content > main {
-  grid-area: content;
-}
-.content > footer {
-  grid-area: footer;
-  text-align: center;
-  font-size: small;
-}
-/*header*/
-.header-container {
-  grid-area: header;
+header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #CFAB8D;
-  color: #fff;
+  width: 100%;      
+  z-index: 1000; 
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  top: 0;
-  padding-left: 10px;
-  width: 100%;
-  z-index: 1000;
+  align-items: center;
+  padding: 10px 10px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #cfab8d;
 }
- 
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+nav {
+  position: absolute; 
+  top: 100%;  
+  left: 0;
+  width: 100%;
+  background: #cfab8d;
+}
+
+.nav-menu {
+  list-style-type: none;
+  padding: 5px 10px; ;
+  margin: 1px 0;
+  max-height: 0;        
+  overflow: hidden;     
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: max-height 0.3s ease;
+}
+.nav-link {
+  background-color: #cfab8d;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
+  text-align: center;
+}
+
 #menu-toggle {
   display: none;
- 
+}
+
+#menu-toggle:checked ~ nav .nav-menu {
+  max-height: 500px; 
 }
 
 .hamburger {
-  display: none; 
-    position: absolute;
+  display: block;
+  position: absolute;
   right: 30px;
   top: 20px;
-
   font-size: 20px;
   cursor: pointer;
   user-select: none;
   color: #fff;
 }
 
-.nav-links ul {
-  display: flex;
+/* للشاشات الكبيرة */
+@media (min-width: 769px) {
+  
+  .hero-section{
+    margin-top: 74px;
+  }
+  .overlay{
+font-size: 30px;
+  }
+  .hamburger { display: none; }
+
+  nav {
+    position: static; 
+    width: auto;
+  }
+
+  .nav-menu {
+    max-height: none;      
+    flex-direction: row;   
+    justify-content: flex-end;
+  }
+
+  .logo {
+    font-size: 1.9rem;
+    
+  }
+  .product-list .item {
+    width: 300px; 
+  }
+  .about-section h2{
+    font-size: large;
+  }
+  
   
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-     
-  }
-  
-.logo{
-  font-size: medium;
-      padding-left: 20px ;  
-      padding-top: 20px ;  
-
-}
-  .nav-links ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #D9C4B0;
-    margin-top: 10px;
-  }
-
-  #menu-toggle:checked ~ nav ul {
-    max-height: 500px; 
-  }
-   
-}
 /* Hero Section */
 .overlay{
-  padding-top: 180px;
- height: 70vh;
+width: 100%;
+  margin-top: 25px;
+ height: 72vh;
   background: url('../Images/img1.jpg') no-repeat center center/cover;
   flex-direction: column;
   justify-content: center;
@@ -102,10 +116,24 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 
-
+.hero-section .btn {
+    padding: 10px 20px;
+  }
+.hero-section .btn:hover {
+    background-color: #b5947c; 
+  }
+  
+/* Products Section */
+.products {
+  background-color: #ffffff;
+  color: #333;
+  padding: 40px 20px;
+  margin: 20px;
+  border-radius: 8px;
+}
 .product-list {
   display: flex;
   gap: 20px;
@@ -113,9 +141,11 @@ body {
   flex-wrap: wrap;
 }
 .product-list .item {
+    width: 100%; 
+    max-width: 300px;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 2px outset #ddd;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   width: 200px;
@@ -128,10 +158,61 @@ body {
 
   max-width: 100%;
   height: auto;
-
   border-radius: 5px;
 
 }
+.products h2 {
+  margin: 20px 0;
+  font-size: xx-large;
+  text-align: center;
+}
+
+/*info Section*/
+.info-section {
+  background-color: #ffffff;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 8px;
+}
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background-color: #f9f9f9;
+  border:2px outset #d1cdcd;
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0px 3px 3px #070606;
+}
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+.card figcaption {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+
 /* About Section */
 .about-section{
   background-color: #ffffff;
@@ -141,79 +222,31 @@ body {
   margin: 20px;
   border-radius: 8px;
 }
-/* Footer (Contact Section )*/
-.contact-section {
-  background-color: #CFAB8D;
-  color: #ffffff;
-  padding: 40px 20px;
-  text-align: center; 
-  font-weight: bold;
-}
-
-.contact-section h3 {
+.about-section h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  padding: 10px;
+  font-size: x-large;
+  text-align:left;
+}
+.about-section p {
+  text-align: justify;
+  font-size: large;
+  line-height: 1.6; 
+  padding: 15px;
+}
+.about-section img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.contact-section p {
-  margin: 10px 0;
-  font-size: 16px;
-}
 
-.contact-section a {
-  text-decoration: none;
-  margin: 0 5px;
-}
 
-.bagora{
-  text-align: center;
-}
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
 
-  .nav-links ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
 
-  .product-list .item {
-    width: 100%; /* المنتجات تأخذ كامل عرض الشاشة */
-    max-width: 300px;
-  }
 
-  .hero-section .overlay {
-    font-size: 22px;
-    padding: 15px;
-  }
+  
 
-  .hero-section .btn {
-    padding: 10px 20px;
-  }
-}
+  
 
-@media (max-width: 480px) {
-  .hero-section .overlay {
-    font-size: 18px;
-  }
 
-  .about-section {
-    padding: 30px 15px;
-  }
-
-  .contact-section {
-    padding: 25px 15px;
-  }
-
-  .contact-section h3 {
-    font-size: 20px;
-  }
-
-  .contact-section p {
-    font-size: 14px;
-  }
-}

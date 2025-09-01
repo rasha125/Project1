@@ -1,16 +1,23 @@
 
 * {
-    list-style: none;
-
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-offset: -2px;
 }
 
-p{
-  text-align: justify;
-  font-size: large;
-  line-height: 1.6; 
-  padding: 15px;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
 }
+
+
+
 button {
     width: 100%;
     padding: 10px;
@@ -23,11 +30,12 @@ button {
 }
  h2 {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     font-size: xx-large;
 
 }
-a {
+
+  a {
     display: inline-block;   
     padding: 10px 20px;      
     background-color: #CFAB8D; 
@@ -36,8 +44,55 @@ a {
     border-radius: 5px;      
     font-weight: bold;       
     transition: background-color 0.3s; 
-}
+        list-style: none;
+
+} 
 
 a:hover {
     background-color: #b5947c; 
+} 
+
+
+
+/* Footer (Contact Section )*/
+.contact-section {
+  background-color: #CFAB8D;
+  color: #ffffff;
+  text-align: center; 
+  padding: 20px;
+}
+
+.contact-section h3 {
+  padding-top: 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.contact-section p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.contact-section a {
+  text-decoration: none;
+  margin: 0 5px;
+} 
+
+.bagora{
+  text-align: center;
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 769px) {
+.contact-section h3 {
+    font-size: 24px;
+  }
+  .contact-section p {
+    font-size:18px ;
+    font-weight: bold;
+  }
+  .contact-section {
+    padding: 40px 20px;
+  }
+  
 }
